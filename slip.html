@@ -1,96 +1,109 @@
-<!-- <form action="">
-            num1:<input id="num1" type="text" >
-            <br>
-            num2:<input id="num2" type="text">
-            <br>
-            result:<input id="result" type="text">
-            <br>
-            
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="slip.css">
+</head>
 
-      </form> -->
-
-<div class="card">
-      <div id="card1" onclick="price1()" class="card1">T-shirt Rs1000</div>
-      <div id="card2" onclick="price2()" class="card2">Phone Rs 500 </div>
-</div>
-
-<br>
-<button onclick="cal()">Total Amount </button>
-
-<div id="demo"> </div>
+<body>
 
 
 
-<script>
+      <div class="card">
+            <div id="card1" onclick="price1()" class="card1">T-shirt Rs1000</div>
+            <div id="card2" onclick="price2()" class="card2">Phone Rs 500 </div>
+      </div>
 
-      var prc2, prc2_value = 0;
-      var prc1, prc1_value = 0;
+      <br>
+      <button onclick="cal()">Total Amount </button>
 
-      let isselected1 = true;
-      let isselected2 = true;
-
-      function cal() {
-            var sum;
-            sum = prc1_value + prc2_value;
-            document.getElementById("demo").innerHTML = "Total RS." + sum;
+      <div id="demo"> </div>
 
 
 
+      <script>
 
-      }
+            var prc2, prc2_value = 0;
+            var prc1, prc1_value = 0;
 
-      function price1() {
+            let isselected1 = true;
+            let isselected2 = true;
+
+            function cal() {
+                  var sum;
+                  sum = prc1_value + prc2_value;
+                  document.getElementById("demo").innerHTML = "Total RS." + sum;
 
 
 
-            if (isselected1) {
 
-                  document.getElementById("card1").style.border = "12px solid green";
-                  prc1_value = 1000;
-                  isselected1 = false;
-
-            }
-            else {
-
-                  document.getElementById("card1").style.border = "gray";
-                  prc1_value = 0;
-                  isselected1 = true;
             }
 
-
-            console.log(prc1_value);
-
-
-
-      }
-
-      function price2() {
+            function price1() {
 
 
 
-            if (isselected2) {
+                  if (isselected1) {
 
-                  document.getElementById("card2").style.border = "12px solid green";
-                  prc2_value = 500;
-                  isselected2 = false;
+                        document.getElementById("card1").style.border = "5px solid green";
+                        prc1_value = 1000;
+                        isselected1 = false;
+
+                  }
+                  else {
+
+                        document.getElementById("card1").style.border = "gray";
+                        prc1_value = 0;
+                        isselected1 = true;
+                  }
+
+
+                  console.log(prc1_value);
+
+
 
             }
-            else {
 
-                  document.getElementById("card2").style.border = "gray";
-                  prc2_value = 0;
-                  isselected2 = true;
+            function price2() {
+
+
+
+                  if (isselected2) {
+
+                        document.getElementById("card2").style.border = "5px solid green";
+                        prc2_value = 500;
+                        isselected2 = false;
+
+                  }
+                  else {
+
+                        document.getElementById("card2").style.border = "gray";
+                        prc2_value = 0;
+                        isselected2 = true;
+                  }
+
+
+                  console.log(prc2_value);
+
+
+
             }
 
-
-            console.log(prc2_value);
-
+      </script>
 
 
-      }
 
-</script>
+
+
+
+
+
+
+
 </body>
 
 </html>
