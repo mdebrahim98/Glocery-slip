@@ -37,3 +37,9 @@ button{
       color: black;
       background-color: coral;
 }
+.head-text{
+      text-align: center;
+      color:blue;
+
+      padding: 8px 12px ;
+}
